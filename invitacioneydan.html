@@ -41,8 +41,27 @@
     <!-- Contenido -->
     <div class="container text-center">
         <!-- Imagen Decorativa -->
-        <img src="https://via.placeholder.com/300x200.png?text=Fiesta+Infantil" class="img-fluid rounded mb-4" alt="Decoración Infantil">
-        
+        <div id="photoCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+          <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="3000">
+                  <img src="images/photo1.JPG" class="d-block w-100 rounded" alt="Foto 1">
+              </div>
+              <div class="carousel-item" data-bs-interval="3000">
+                  <img src="images/photo2.JPG" class="d-block w-100 rounded" alt="Foto 2">
+              </div>
+              <div class="carousel-item" data-bs-interval="3000">
+                  <img src="images/photo3.JPG" class="d-block w-100 rounded" alt="Foto 3">
+              </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
+        </div>
         <!-- Detalles del Evento -->
         <div class="card mx-auto p-4" style="max-width: 500px;">
             <img src="https://via.placeholder.com/150x150.png?text=Balloons" class="balloons mx-auto" alt="Globos">
@@ -54,7 +73,7 @@
 
         <div class="card mx-auto p-4" style="max-width: 500px;">
           <img src="https://via.placeholder.com/150x150.png?text=Balloons" class="balloons mx-auto" alt="Globos">
-          <h2 class="text-primary"> Ceremonia Religiosa</h2>
+          <h2 class="text-primary"> Recepción </h2>
           <p class="mb-3"><strong>🎈 Fecha:</strong> Sábado, 25 de Enero de 2025</p>
           <p class="mb-3"><strong>🕒 Hora:</strong> 5:00 PM</p>
           <a href="#" class="btn btn-primary btn-lg mx-2">🎉 Ubicación</a>
