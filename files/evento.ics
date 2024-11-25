@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Tu Empresa//Evento Eydan//ES
+BEGIN:VEVENT
+UID:20240125T150000Z@tuevento.com
+DTSTAMP:20240101T120000Z
+DTSTART:20240125T150000Z
+DTEND:20240125T170000Z
+SUMMARY:Bautizo y Primer Año de Eydan
+DESCRIPTION:¡Ven a celebrar el bautizo y primer año de Eydan! 🎉
+LOCATION:Iglesia Principal, Ciudad, País
+END:VEVENT
+END:VCALENDAR
