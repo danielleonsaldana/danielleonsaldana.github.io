@@ -3,26 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Invitación Eydan León 🎉</title>
+    <title>Invitación Eydan León 🎉</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Estilos Personalizados -->
     <style>
         body {
+            position: relative;
             background: linear-gradient(135deg, #cce7ff, #99c2ff);
             background-image: url('images/background.jpg'); /* Imagen de fondo */
             background-size: cover;
             color: #333;
             font-family: 'Comic Sans MS', cursive, sans-serif;
+            border: 15px solid #007bff; /* Marco */
+            border-radius: 25px; /* Esquinas redondeadas del marco */
+            padding: 20px;
+            overflow: hidden;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/bebe1.png'), url('images/bebe3.png'); /* Imágenes decorativas */
+            background-size: 200px; /* Tamaño ajustable de las decoraciones */
+            background-repeat: no-repeat;
+            background-position: top left, bottom right;
+            z-index: 1;
+            opacity: 0.8;
+        }
+        body * {
+            position: relative;
+            z-index: 2; /* Para que el contenido esté por encima del decorativo */
         }
         .card {
             background-color: rgba(255, 255, 255, 0.8); /* Fondo translúcido */
             border-radius: 15px;
             border: none;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }     
+        }
         .carousel {
-        margin-bottom: 2rem; /* Separación inferior */
+            margin-bottom: 2rem; /* Separación inferior */
         }
         .btn-primary {
             background-color: #007bff;
@@ -46,68 +69,47 @@
         <h1 class="display-4 text-white" style="font-size: 3rem;">🎈 ¡Eydan! 🎉</h1>
         <p class="lead text-white">¡Ven a celebrar mi Bautizo y mi Primer Año!</p>
     </div>
-    <p class="container text-center">
-        <!-- Imagen Decorativa foto 1 y 7 no usar -->
-        <div id="photoCarousel" class="carousel slide mb-4" data-bs-ride="carousel"  style="margin-bottom: 2rem;">
-          <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="3000">
-                  <img src="images/photo2.JPG" class="d-block w-100 rounded" alt="Foto 1">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                  <img src="images/photo4.JPG" class="d-block w-100 rounded" alt="Foto 2">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                  <img src="images/photo3.JPG" class="d-block w-100 rounded" alt="Foto 3">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="images/photo5.JPG" class="d-block w-100 rounded" alt="Foto 3">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="images/photo6.JPG" class="d-block w-100 rounded" alt="Foto 3">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="images/photo8.JPG" class="d-block w-100 rounded" alt="Foto 3">
-              </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-          </button>
+    <!-- Carrusel de fotos -->
+    <div id="photoCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/photo2.JPG" class="d-block w-100 rounded" alt="Foto 1">
+            </div>
+            <!-- Agrega más items aquí -->
         </div>
-        <!-- Detalles del Evento -->
-        <div class="card mx-auto p-4" style="max-width: 500px;">
-            <img src="images/cruz.png" class="balloons mx-auto" alt="Globos">
-            <h2 class="text-primary"> Ceremonia Religiosa</h2>
-            <p class="mb-3"><strong>🎈 Fecha:</strong> Sábado, 25 de Enero de 2025</p>
-            <p class="mb-3"><strong>🕒 Hora:</strong> 3:00 PM</p>
-            <a href="https://maps.app.goo.gl/4rScojs7wwH5WXyE9" class="btn btn-primary btn-lg mx-2">🎉 Ubicación</a>
-        </div>
-        <br></br>
-
-        <div class="card mx-auto p-4" style="max-width: 500px;">
-          <img src="images/cumple.png" class="balloons mx-auto" alt="Globos">
-          <h2 class="text-primary"> Recepción </h2>
-          <p class="mb-3"><strong>🎈 Fecha:</strong> Sábado, 25 de Enero de 2025</p>
-          <p class="mb-3"><strong>🕒 Hora:</strong> 5:00 PM</p>
-          <a href="https://maps.app.goo.gl/FedZnYEcQg7iqr8aA" class="btn btn-primary btn-lg mx-2">🎉 Ubicación</a>
-      </div>
-
-        <!-- Botones -->
-        <div class="mt-4 text-center">
-            <a href="https://wa.me/5529701246?text=¡Hola!%20Quiero%20confirmar%20mi%20asistencia%20al%20evento%20de%20Eydan%20🎉" class="btn btn-primary btn-lg mx-2">🎉 Confirmar Asistencia</a>
-            <a href="files/evento.ics" class="btn btn-warning btn-lg mx-2">📅 Agregar al Calendario</a>
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-
+    <!-- Detalles del evento -->
+    <div class="card mx-auto p-4" style="max-width: 500px;">
+        <img src="images/cruz.png" class="balloons mx-auto" alt="Globos">
+        <h2 class="text-primary">Ceremonia Religiosa</h2>
+        <p><strong>🎈 Fecha:</strong> Sábado, 25 de Enero de 2025</p>
+        <p><strong>🕒 Hora:</strong> 3:00 PM</p>
+        <a href="https://maps.app.goo.gl/4rScojs7wwH5WXyE9" class="btn btn-primary btn-lg mx-2">🎉 Ubicación</a>
+    </div>
+    <br>
+    <div class="card mx-auto p-4" style="max-width: 500px;">
+        <img src="images/cumple.png" class="balloons mx-auto" alt="Globos">
+        <h2 class="text-primary">Recepción</h2>
+        <p><strong>🎈 Fecha:</strong> Sábado, 25 de Enero de 2025</p>
+        <p><strong>🕒 Hora:</strong> 5:00 PM</p>
+        <a href="https://maps.app.goo.gl/FedZnYEcQg7iqr8aA" class="btn btn-primary btn-lg mx-2">🎉 Ubicación</a>
+    </div>
+    <div class="mt-4 text-center">
+        <a href="https://wa.me/5529701246?text=¡Hola!%20Quiero%20confirmar%20mi%20asistencia%20al%20evento%20de%20Eydan%20🎉" class="btn btn-primary btn-lg mx-2">🎉 Confirmar Asistencia</a>
+        <a href="files/evento.ics" class="btn btn-warning btn-lg mx-2">📅 Agregar al Calendario</a>
+    </div>
     <!-- Footer -->
     <footer class="text-center text-white mt-5">
         <p>¡Te esperamos para celebrar juntos! 🎊</p>
     </footer>
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
