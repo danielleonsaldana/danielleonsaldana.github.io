@@ -90,15 +90,20 @@
             transform: scale(1.05);
             transition: background-color 0.3s, transform 0.3s;
         }
+        @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+        }
+
     </style>
 </head>
 
 <br>
     <!-- Encabezado -->
     <div class="text-center py-4">
-        <h1 class="display-4" style="font-size: 3rem; color: #0056b3; text-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.3);"> ¡Eydan! 🎉</h1>
+        <h1 class="display-4" style="font-size: 3rem; color: #0056b3; animation: bounce 1s infinite;">  ¡Eydan! 🎉</h1>
         <!--<h1 class="display-4" style="font-size: 3rem; color: #0056b3;">¡Eydan! 🎉</h1>-->
-        <p class="lead" style="color: #0056b3;">¡Ven a celebrar mi Bautizo y mi Primer Año!</p>
+        <p class="lead" style="color: #0056b3; animation: bounce 1s infinite;">¡Ven a celebrar mi Bautizo y mi Primer Año!</p>
     </div>
 
     <!-- Contador de la recepción -->
