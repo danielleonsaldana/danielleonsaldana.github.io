@@ -60,14 +60,18 @@
         footer {
             background-color: rgba(0, 0, 0, 0.5);
             padding: 10px 0;
+            margin-top: 10px;
+        }
+        .btn-container {
+            margin-bottom: 0; /* Reducir el margen inferior del div */
         }
     </style>
 </head>
 <br>
     <!-- Encabezado -->
     <div class="text-center py-4">
-        <h1 class="display-4 text-white" style="font-size: 3rem;">       ¡Eydan! 🎉</h1>
-        <p class="lead text-white" >¡Ven a celebrar mi Bautizo y mi Primer Año!</p>
+        <h1 class="display-4 text-white" style="font-size: 3rem; color: #0056b3;">       ¡Eydan! 🎉</h1>
+        <p class="lead text-white color: #0056b3;" >¡Ven a celebrar mi Bautizo y mi Primer Año!</p>
     </div>
     <!-- Carrusel de fotos -->
     <div id="photoCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
@@ -101,6 +105,7 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+    <br></br>
     <!-- Detalles del evento -->
     <div class="card mx-auto p-4" style="max-width: 500px;">
         <img src="images/cruz.png" class="balloons mx-auto" alt="Globos">
@@ -120,7 +125,7 @@
     <!--<div class="mt-4 text-center">-->
     <br></br>
     <br></br>
-    <div>
+    <div class="btn-container text-center">
         <a href="https://wa.me/5529701246?text=¡Hola!%20Quiero%20confirmar%20mi%20asistencia%20al%20evento%20de%20Eydan%20🎉" class="btn btn-primary btn-lg mx-2">🎉 Confirmar Asistencia</a>
         <a href="files/evento.ics" class="btn btn-warning btn-lg mx-2">📅 Agregar al Calendario</a>
     </div>
