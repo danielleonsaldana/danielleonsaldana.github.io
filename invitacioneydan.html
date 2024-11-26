@@ -70,9 +70,62 @@
 <br>
     <!-- Encabezado -->
     <div class="text-center py-4">
-        <h1 class="display-4 text-white" style="font-size: 3rem; color: #0056b3;">       ¡Eydan! 🎉</h1>
-        <p class="lead text-white color: #0056b3;" >¡Ven a celebrar mi Bautizo y mi Primer Año!</p>
+        <h1 class="display-4" style="font-size: 3rem; color: #0056b3;">       ¡Eydan! 🎉</h1>
+        <p class="lead color: #0056b3;" >¡Ven a celebrar mi Bautizo y mi Primer Año!</p>
     </div>
+
+    <h1>¡Cuenta regresiva para la recepción! 🎉</h1>
+    <div class="countdown">
+        <div>
+            <span id="days">0</span>
+            <div class="time-label">Días</div>
+        </div>
+        <div>
+            <span id="hours">0</span>
+            <div class="time-label">Horas</div>
+        </div>
+        <div>
+            <span id="minutes">0</span>
+            <div class="time-label">Minutos</div>
+        </div>
+        <div>
+            <span id="seconds">0</span>
+            <div class="time-label">Segundos</div>
+        </div>
+    </div>
+
+    <script>
+        // Fecha de la recepción
+        const receptionDate = new Date('January 25, 2025 17:00:00').getTime();
+
+        // Actualizar el contador cada segundo
+        const countdownInterval = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = receptionDate - now;
+
+            if (distance >= 0) {
+                // Calcular días, horas, minutos y segundos
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Mostrar en el HTML
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = hours;
+                document.getElementById('minutes').textContent = minutes;
+                document.getElementById('seconds').textContent = seconds;
+            } else {
+                // Si la fecha ya pasó, detener el contador
+                clearInterval(countdownInterval);
+                document.querySelector('.countdown').innerHTML = '<h2>¡El evento ha comenzado! 🎉</h2>';
+            }
+        }, 1000);
+    </script>
+
+
+
+
     <!-- Carrusel de fotos -->
     <div id="photoCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -122,10 +175,11 @@
         <p><strong>🕒 Hora:</strong> 5:00 PM</p>
         <a href="https://maps.app.goo.gl/FedZnYEcQg7iqr8aA" class="btn btn-primary btn-lg mx-2">🎉 Ubicación</a>
     </div>
-    <!--<div class="mt-4 text-center">-->
+
     <br></br>
     <br></br>
-    <div class="btn-container text-center">
+    <div>
+        <br></br>
         <a href="https://wa.me/5529701246?text=¡Hola!%20Quiero%20confirmar%20mi%20asistencia%20al%20evento%20de%20Eydan%20🎉" class="btn btn-primary btn-lg mx-2">🎉 Confirmar Asistencia</a>
         <a href="files/evento.ics" class="btn btn-warning btn-lg mx-2">📅 Agregar al Calendario</a>
     </div>
