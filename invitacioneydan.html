@@ -15,10 +15,8 @@
             background-size: cover;
             color: #333;
             font-family: 'Comic Sans MS', cursive, sans-serif;
-            /*border: 15px solid #007bff;  Marco */
             border-radius: 25px; 
             padding: 20px;
-            /* overflow: hidden;*/
         }
         body::before {
             content: '';
@@ -62,19 +60,48 @@
             padding: 10px 0;
             margin-top: 10px;
         }
-        .btn-container {
-            margin-bottom: 0; /* Reducir el margen inferior del div */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .countdown div {
+            margin: 0 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100px;
+        }
+        .countdown span {
+            display: block;
+            font-size: 2.5rem;
+            color: #333;
+            font-weight: bold;
+        }
+        .time-label {
+            font-size: 1rem;
+            color: #777;
+        }
+        .countdown div:hover {
+            background-color: #f8f8f8;
+            transform: scale(1.05);
+            transition: background-color 0.3s, transform 0.3s;
         }
     </style>
 </head>
-<br>
+
+<body>
     <!-- Encabezado -->
     <div class="text-center py-4">
-        <h1 class="display-4" style="font-size: 3rem; color: #0056b3;">       ¡Eydan! 🎉</h1>
-        <p class="lead color: #0056b3;" >¡Ven a celebrar mi Bautizo y mi Primer Año!</p>
+        <h1 class="display-4" style="font-size: 3rem; color: #0056b3;">¡Eydan! 🎉</h1>
+        <p class="lead" style="color: #0056b3;">¡Ven a celebrar mi Bautizo y mi Primer Año!</p>
     </div>
 
-    <h1>¡Cuenta regresiva para la recepción! 🎉</h1>
+    <!-- Contador de la recepción -->
+    <h1 class="text-center">¡Cuenta regresiva para la recepción! 🎉</h1>
     <div class="countdown">
         <div>
             <span id="days">0</span>
